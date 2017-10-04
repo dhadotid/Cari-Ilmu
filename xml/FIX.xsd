@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="root" type="dt_buku"></xs:element>
+    <xs:complexType name="dt_buku">
+        <xs:sequence>
+            <xs:element name="book" type="book" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="book">
+        <xs:sequence>
+            <xs:element name="book_title" type="xs:string"></xs:element>
+            <xs:element name="category" type="ctr"></xs:element>
+            <xs:element name="author" type="xs:string"></xs:element>
+            <xs:element name="publisher" type="xs:string"></xs:element>
+            <xs:element name="release" type="rls"></xs:element>
+            <xs:element name="price" type="xs:positiveInteger" ></xs:element>
+        </xs:sequence>
+        <xs:attribute name="idbook" type="idb" use="required"></xs:attribute>
+        <xs:attribute name="idstore" type="str" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:simpleType name="ctr">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="Novel|Technology|Motivation|Comic"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="rls">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(19|20)\d\d"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="idb">
+        <xs:restriction base="xs:string">
+            <xs:length value="4"/>
+            <xs:pattern value="B[0-9][0-9][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="str">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="S[0-9][0-9][0-9]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

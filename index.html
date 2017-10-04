@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html id="home">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cari Ilmu</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+      function loadXMLDox(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+          if(this.readyState == 4 && this.status == 200){
+            myFunction(this);
+          }
+        };
+        xmlhttp.open("GET", "xml/toko.xml", true);
+        xmlhttp.send();
+      }
+      function myFunction(xml){
+        var i;
+        var txt = "";
+        var txt1 = "";
+        var xmlDOc = xml.responseXML;
+        var x = xmlDOc.getElementsByTagName("toko");
+        for (i = 0; i < x.length; i++) {
+          var idnya = x[i].getAttribute("id_store");
+          var img = x[i].getElementsByTagName("img")[0].childNodes[0].nodeValue;
+          var name = x[i].getElementsByTagName("store_name")[0].childNodes[0].nodeValue;
+          var phone = x[i].getElementsByTagName("phonenumber")[0].childNodes[0].nodeValue;
+            if(i % 2 == 0){
+              txt += "<img src='" + img + "'><div class='caption'><center><div><h3>" + name + "</h3></div><p>" + phone + "</p><p><a href='searchbook.html?id=" + idnya + "' class='btn btn-primary' role='button'>Search Book</a></p></center></div>"
+            }else {
+              txt1 += "<img src='" + img + "'><div class='caption'><center><div><h3>" + name + "</h3></div><p>" + phone + "<p><a href='searchbook.html?id=" + idnya + "' class='btn btn-primary' role='button'>Search Book</a></p></center></div>"
+            }
+        }
+        document.getElementById("tokokiri").innerHTML = txt;
+        document.getElementById("tokokanan").innerHTML = txt1;
+      }
+    </script>
+  </head>
+  <body onload="loadXMLDox()">
+    <form action="searchbook.html" method="GET">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand page-scroll">Cari Ilmu</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html#about" class="page-scroll">About</a></li>
+              <li><a href="index.html#toko" class="page-scroll">Toko</a></li>
+              <li><a href="contactus.html" class="page-scroll">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="jumbotron text-center">
+        <h1>Cari Ilmu</h1>
+        <p>Buku adalah sebuah jembatan ilmu. Maka dari itu perbanyaklah membaca buku agar mendapatkan banyak ilmu.</p>
+      </div>
+      <section class="about" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="text-center text-h2">About</h2>
+              <hr>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+              <p class="pKiri">Untuk mendapatkan banyak ilmu kita perlu membaca buku, karena buku merupakan jembatan ilmu. Maka dari itu untuk mengecek harga buku terupdate ditoko buku kesayangan anda, anda dapat mengeceknya pada website ini.</p>
+            </div>
+            <div class="col-sm-5">
+              <p class="pKanan">Anda dapat mencari buku yang anda inginkan lalu mengecek harganya disini, dan anda juga dapat memilih toko buku mana yang ingin anda lihat harganya.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="toko" id="toko">
+        <div class="container">
+          <div class="col-md-12">
+            <h2 class="text-center text-h2">Toko</h2>
+            <hr>
+            <div class="col-sm-5 col-sm-offset-1">
+              <div class="thumbnail" id="tokokiri">
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <div class="thumbnail" id="tokokanan">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-sm-12">
+              <p><i class="glyphicon glyphicon-copyright-mark"></i> Copyright 2017 | Created by <a href="https://www.rsypj.com">dhadotid</a> and Dendy.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </form>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

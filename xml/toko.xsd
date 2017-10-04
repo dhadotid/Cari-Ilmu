@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="root" type="dt_toko"></xs:element>
+    <xs:complexType name="dt_toko">
+        <xs:sequence>
+            <xs:element name="toko" type="store" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="store">
+        <xs:sequence>
+            <xs:element name="img" type="xs:string"></xs:element>
+            <xs:element name="store_name" type="xs:string"></xs:element>
+            <xs:element name="phonenumber" type="noP"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="id_store" type="strID" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:simpleType name="strID">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="S[0-9][0-9][0-9]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="noP">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[+]62[0-9]{9,12}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

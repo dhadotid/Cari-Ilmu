@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="toko.xsd">
+    <toko id_store="S001">
+        <img>img/gramedia.png</img>
+        <store_name>Gramedia</store_name>
+        <phonenumber>+628227780827</phonenumber>
+    </toko>
+    <toko id_store="S002">
+        <img>img/periplus.png</img>
+        <store_name>Periplus</store_name>
+        <phonenumber>+62822770822</phonenumber>
+    </toko>
+    <toko id_store="S003">
+        <img>img/aksara.jpg</img>
+        <store_name>Aksara</store_name>
+        <phonenumber>+62823340851</phonenumber>
+    </toko>
+    <toko id_store="S004">
+        <img>img/karisma.png</img>
+        <store_name>Karisma</store_name>
+        <phonenumber>+628227288647</phonenumber>
+    </toko>
+</root>

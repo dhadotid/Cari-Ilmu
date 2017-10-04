@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="FIX.xsd">
+    <book idbook="B001" idstore="S001">
+        <book_title>No Place Like Home</book_title>
+        <category>Novel</category>
+        <author>Alma Aridatha</author>
+        <publisher>Ikon</publisher>
+        <release>01/04/2017</release>
+        <price>80000</price>
+    </book>
+    <book idbook="B002" idstore="S001">
+        <book_title>Dilan : Dia adalah Dilanku Tahun 1990</book_title>
+        <category>Novel</category>
+        <author>Pidi Baiq</author>
+        <publisher>Mizan</publisher>
+        <release>01/04/2014</release>
+        <price>79000</price>
+    </book>
+    <book idbook="B003" idstore="S002">
+        <book_title>No Place Like Home</book_title>
+        <category>Novel</category>
+        <author>Alma Aridatha</author>
+        <publisher>Ikon</publisher>
+        <release>01/04/2017</release>
+        <price>80000</price>
+    </book>
+    <book idbook="B004" idstore="S003">
+        <book_title>No Place Like Home</book_title>
+        <category>Novel</category>
+        <author>Alma Aridatha</author>
+        <publisher>Ikon</publisher>
+        <release>01/04/2017</release>
+        <price>76000</price>
+    </book>
+    <book idbook="B005" idstore="S004">
+        <book_title>No Place Like Home</book_title>
+        <category>Novel</category>
+        <author>Alma Aridatha</author>
+        <publisher>Ikon</publisher>
+        <release>01/04/2017</release>
+        <price>73000</price>
+    </book>
+	<book idbook="B006" idstore="S004">
+        <book_title>Dilan : Dia adalah Dilanku Tahun 1990</book_title>
+        <category>Novel</category>
+        <author>Pidi Baiq</author>
+        <publisher>Mizan</publisher>
+        <release>01/04/2014</release>
+        <price>77000</price>
+    </book>
+	<book idbook="B007" idstore="S004">
+        <book_title>Supernova #5 Gelombang</book_title>
+        <category>Novel</category>
+        <author>Dee Lestari</author>
+        <publisher>BENTANG PUSTAKA</publisher>
+          <release>06/10/2014</release>
+        <price>77000</price>
+    </book>
+	<book idbook="B008" idstore="S004">
+        <book_title>The Wisdom of Narnia</book_title>
+        <category>Novel</category>
+            <author>C. S. Lewis</author>
+            <publisher>Harper Collins</publisher>
+            <release>03/10/2015</release>
+			<price>76000</price>
+    </book>
+	<book idbook="B009" idstore="S001">
+            <book_title>The Wisdom of Narnia</book_title>
+            <category>Novel</category>
+            <author>C. S. Lewis</author>
+            <publisher>Harper Collins</publisher>
+            <release>03/10/2015</release>
+			<price>81000</price>
+    </book>
+	<book idbook="B010" idstore="S003">
+            <book_title>The Wisdom of Narnia</book_title>
+            <category>Novel</category>
+            <author>C. S. Lewis</author>
+            <publisher>Harper Collins</publisher>
+            <release>03/10/2015</release>
+			<price>80000</price>
+    </book>
+	<book idbook="B011" idstore="S002">
+            <book_title>The Wisdom of Narnia</book_title>
+            <category>Novel</category>
+            <author>C. S. Lewis</author>
+            <publisher>Harper Collins</publisher>
+            <release>03/10/2015</release>
+			<price>79500</price>
+    </book>
+	<book idbook="B012" idstore="S002">
+            <book_title>New Edition Sang Pemimpi</book_title>
+              <category>Novel</category>
+              <author>Andrea Hirata</author>
+              <publisher>BENTANG</publisher>
+              <release>01/01/2009</release>
+			<price>79500</price>
+    </book>
+	<book idbook="B013" idstore="S003">
+            <book_title>New Edition Sang Pemimpi</book_title>
+              <category>Novel</category>
+              <author>Andrea Hirata</author>
+              <publisher>BENTANG</publisher>
+              <release>01/01/2009</release>
+			<price>79500</price>
+    </book>
+</root>
